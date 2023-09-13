@@ -4,6 +4,7 @@
 /.project
 /.settings
 /.vscode
+/.dockerizer
 atlassian*
 /nbproject
 /robots.txt
