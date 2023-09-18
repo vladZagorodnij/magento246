@@ -1,6 +1,16 @@
-<?php /** @var \VladZahorodnii\HomeCategory\Block\HomeCategories $block */ ?>
+<?php
+/** @var \VladZahorodnii\HomeCategory\Block\HomeCategories $block */
 
-<h1>custom cms block</h1>
+$allCategories = $block->getCategories();
+?>
 
-<p><?= $block->getCategories() ?></p>
-<!--<p>--><?php //= $block->getCategories() ?><!--</p>-->
+<div class="categories-container">
+    <?php foreach ($allCategories as $category): ?>
+        <ul class="category-list">
+            <li class="category-item">
+                <a href="<?= $category['url'] ?>"><?= $category['name'] ?></a>
+            </li>
+        </ul>
+    <?php endforeach; ?>
+</div>
+
