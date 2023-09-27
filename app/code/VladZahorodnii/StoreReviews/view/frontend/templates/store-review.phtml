@@ -1,4 +1,79 @@
 <?php
-// Add Some Code Here for design
+/**
+ * @var \VladZahorodnii\StoreReviews\Block\StoreReviewForm $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
 ?>
-<span> My Custom Tab. 123 </span>
+<div class="store-review-container">
+    <form class="form"
+          id="store-review-form"
+          action="<?= $escaper->escapeHtmlAttr(__('#')) ?>"
+          method="post"
+    >
+        <fieldset class="fieldset">
+            <legend class="legend">
+                <span><?= $escaper->escapeHtml(__('Please fill out the form')) ?></span>
+            </legend>
+            <br/>
+            <div class="field title required">
+                <label class="label" for="title">
+                    <span><?= $escaper->escapeHtml(__('Title')) ?></span>
+                </label>
+                <div class="control">
+                    <input name="title"
+                           title="<?= $escaper->escapeHtmlAttr(__('Title')) ?>"
+                           class="input-text"
+                           type="text"
+                    />
+                </div>
+            </div>
+            <div class="field review required">
+                <label class="label" for="review">
+                    <span><?= $escaper->escapeHtml(__('Review')) ?></span>
+                </label>
+                <div class="control">
+                    <textarea name="review"
+                           title="<?= $escaper->escapeHtmlAttr(__('Review')) ?>"
+                           class="input-textarea input-review">
+                    </textarea>
+                </div>
+            </div>
+            <div class="field pros required">
+                <label class="label" for="pros">
+                    <span><?= $escaper->escapeHtml(__('Pros')) ?></span>
+                </label>
+                <div class="control">
+                    <textarea name="pros"
+                              title="<?= $escaper->escapeHtmlAttr(__('Pros')) ?>"
+                              class="input-textarea input-pros">
+                    </textarea>
+                </div>
+            </div>
+            <div class="field cons required">
+                <label class="label" for="cons">
+                    <span><?= $escaper->escapeHtml(__('Cons')) ?></span>
+                </label>
+                <div class="control">
+                    <textarea name="cons"
+                              title="<?= $escaper->escapeHtmlAttr(__('Cons')) ?>"
+                              class="input-textarea input-cons">
+                    </textarea>
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden"
+                       name="customer_id"
+                       value="<?= $escaper->escapeHtmlAttr((int) $block->getCustomerId()) ?>"
+                />
+                <button type="submit"
+                        title="<?= $escaper->escapeHtmlAttr(__('Send Review')) ?>"
+                        class="action submit primary"
+                >
+                    <span><?= $escaper->escapeHtml(__('Send Review')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

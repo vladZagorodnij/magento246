@@ -7,7 +7,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="store_review" template="VladZahorodnii_StoreReviews::store-review.phtml" />
+            <block class="VladZahorodnii\StoreReviews\Block\StoreReviewForm" name="store_review" template="VladZahorodnii_StoreReviews::store-review.phtml" />
         </referenceContainer>
     </body>
 </page>

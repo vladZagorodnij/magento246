@@ -46,7 +46,6 @@ class Review implements \Magento\Framework\App\Action\HttpGetActionInterface
 
     /**
      * View customer requests
-     *
      * @return ResultInterface
      */
     public function execute(): ResultInterface
