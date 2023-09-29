@@ -7,8 +7,9 @@
 <div class="store-review-container">
     <form class="form"
           id="store-review-form"
-          action="<?= $escaper->escapeHtmlAttr(__('#')) ?>"
+          action="<?= $escaper->escapeHtmlAttr(__('store_review/index/review')) ?>"
           method="post"
+          data-mage-init='{"validation": {}, "storeReviewSubmit": {}}'
     >
         <fieldset class="fieldset">
             <legend class="legend">
@@ -24,6 +25,7 @@
                            title="<?= $escaper->escapeHtmlAttr(__('Title')) ?>"
                            class="input-text"
                            type="text"
+                           data-validate='{"required":true}'
                     />
                 </div>
             </div>
@@ -33,9 +35,12 @@
                 </label>
                 <div class="control">
                     <textarea name="review"
-                           title="<?= $escaper->escapeHtmlAttr(__('Review')) ?>"
-                           class="input-textarea input-review">
-                    </textarea>
+                              title="<?= $escaper->escapeHtmlAttr(__('Review')) ?>"
+                              id="review"
+                              cols="5"
+                              rows="3"
+                              data-validate="{required:true}"
+                    ></textarea>
                 </div>
             </div>
             <div class="field pros required">
@@ -45,8 +50,11 @@
                 <div class="control">
                     <textarea name="pros"
                               title="<?= $escaper->escapeHtmlAttr(__('Pros')) ?>"
-                              class="input-textarea input-pros">
-                    </textarea>
+                              id="pros"
+                              cols="5"
+                              rows="3"
+                              data-validate="{required:true}"
+                    ></textarea>
                 </div>
             </div>
             <div class="field cons required">
@@ -56,8 +64,11 @@
                 <div class="control">
                     <textarea name="cons"
                               title="<?= $escaper->escapeHtmlAttr(__('Cons')) ?>"
-                              class="input-textarea input-cons">
-                    </textarea>
+                              id="cons"
+                              cols="5"
+                              rows="3"
+                              data-validate="{required:true}"
+                    ></textarea>
                 </div>
             </div>
         </fieldset>
