@@ -1,0 +1,14 @@
+{
+    "vlad_zahorodnii_store_review": {
+        "column": {
+            "store_review_id": true,
+            "title": true,
+            "review": true,
+            "pros": true,
+            "cons": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
